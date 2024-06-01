@@ -1,0 +1,2 @@
+1>implement tabe using colspan and rowspan by given image
+2>create web page wihch display 10 products list with name,price,category

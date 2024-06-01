@@ -1,0 +1,38 @@
+fsd--frontend backend
+
+frontend---html css js bootstarp react 
+backend----nodejs  express mongodb 
+
+project industry 
+deployment part--cloud
+
+web application---
+
+vs code--- 1>
+
+html
+    what is html
+doc type
+elemnts 
+tag
+head 
+meta 
+body 
+types of elemnts --block inline 
+semantics and non semnatics 
+html5
+table 
+list
+form---name action method 
+input ---type--text radio checkbox file date range 
+selctbox 
+label 
+textarea 
+readonly 
+disabled 
+datalist 
+details
+summary 
+filedet 
+legend 
+optgroup 

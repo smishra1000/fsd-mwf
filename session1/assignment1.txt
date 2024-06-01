@@ -1,0 +1,10 @@
+1>create simple web page with title "My First page" and heading with "Learning HTML"
+
+2>create simple web page which contains three hyper link  --  
+
+Aboutus   contactus   Profile
+
+-- name: age  
+phone email 
+
+"welocme to my profile

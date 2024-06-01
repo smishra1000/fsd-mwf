@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form demo</title>
+</head>
+<body>
+    <!-- form -- form tag is used for create form to collect user input-->
+    <!----form elemnets-- input, select,textarea-->
+    <!-- input-- text, checkbox radio, file,date,range-->
+    <!-- <form>
+        <label>First name</label>
+        <input type="text"/>
+
+        <label>Last name</label>
+        <input type="text"/>
+        <label>profile pic</label>
+        <input type="file"/>
+        <label>dob</label>
+        <input type="date"/>
+        <label>Courses</label>
+        <input type="checkbox" value="mern"/>Mern
+        <input type="checkbox" value="mean"/>Mean
+        <br/>
+        <label>is married</label>
+        <input type="radio" value="married" name="ismarried"/>married
+        <input type="radio" value="unmarried" name="ismarried"/>unmarried
+        <label>price range</label>
+        <input type="range" min="5" max="10"/>
+
+        <select>
+            <option>India</option>
+            <option>Aus</option>
+            <option>Pak</option>
+        </select>
+
+        <textarea rows="7" col="7"></textarea>
+    </form> -->
+
+
+    <!--Attributes in input element-->
+
+    <form name="registration" action="output.html" method="get" autocomplete="on">
+        <label>Roll Number</label>
+        <input type="text" value="" name="roll" readonly/>
+        <label>First Name</label>
+        <input type="text" value="" name="fname" placeholder="enter name" required disabled/>
+        <label>lastname</label>
+        <input type="text" value="" name="lname" placeholder="enter lastname" required/>
+
+        <label>Pasword</label>
+        <input type="password" value="" name="pass"/>
+        <input type="submit" value="Save"/>
+        <input type="reset" value="reset"/>
+    </form>
+    <!--readonly---- input fields are focused and data can be pass to serve-->
+
+    <!--disabled --input fields anr completely disabled; data will not pass to server-->
+
+    <button disabled>login</button>
+
+
+</body>
+</html>
