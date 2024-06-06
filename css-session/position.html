@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:140px;
+            height: 140px;
+            border: 2px solid blueviolet;
+            position: relative;
+        }
+        .box2{
+            width:120px;
+            height: 120px;
+            border: 2px solid red;
+        }
+        .box3{
+            width:100px;
+            height: 100px;
+            border: 2px solid green;
+            position: absolute;
+            left:10px;
+        }
+        .fixed-div{
+            position:sticky;
+            background-color: yellow;
+            top:10px;
+        }
+    </style>
+</head>
+<body style="border: 2px solid blue;height:900px;">
+    <!--- static relative absolute fixed sticky-->
+    <!-- static-->
+    <!-- <h1>hello</h1> -->
+    <!-- <h2>hello2</h2> -->
+    <!-- <div class="box">
+        <div class="box2">
+            <div class="box3">
+                box3
+            </div>
+        </div>
+        
+    </div>  -->
+
+    <div class="fixed-div">
+        i am fixed
+    </div>
+
+    <!--- absolute position-----elemnt will chnage their position based on its nearest parent positioned element -->
+
+    <!-- sticky-== fixed+relative-->
+
+
+</body>
+</html>
