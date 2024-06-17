@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myportfolio</title>
+    <style>
+        .header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            background-color: cadetblue;
+            height: 70px;
+            align-items: center;
+        }
+        .menu-items{
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .item{
+            display: flex;
+            flex-basis: 120px;
+        }
+        .menu-items li a{
+            display: inline-block;
+            width:120px;
+            padding: 10px;;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .hero-section{
+            height: 50vh;
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <div>
+            <h3>MYLogo</h3>
+        </div>
+        <nav>
+            <ul class="menu-items">
+                <li class="item"><a href="#projects">Projects</a></li>
+                <li class="item"><a href="#contacts">Contact</a></li>
+                <li class="item"><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-section">
+
+        </section>
+        <section class="projects" id="projects">
+            <div style="text-align: center;">
+                <h1>My Projects</h1>
+            </div>
+        </section>
+        <section class="contacts" id="contacts">
+
+        </section>
+    </main>
+</body>
+</html>
