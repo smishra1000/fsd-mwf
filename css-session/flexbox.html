@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>flexbox</title>
     <style>
-        .header{
+        .header {
             width: 600px;
             border: 2px solid red;
             display: flex;
             flex-direction: row;
             height: 100px;
             gap: 10px;
-            justify-content:space-evenly;
+            justify-content: space-evenly;
             align-items: center;
             /* flex-wrap: wrap; */
         }
-        .box1{
-            width: 100px;
-        }
-        .box2{
-            width: 100px;
-        }
-        .box3{
-            width: 100px;
-        }
-        .box4{
+
+        .box1 {
             width: 100px;
         }
 
-        .outer-div{
+        .box2 {
+            width: 100px;
+        }
+
+        .box3 {
+            width: 100px;
+        }
+
+        .box4 {
+            width: 100px;
+        }
+
+        .outer-div {
             display: flex;
             width: 400px;
             height: 400px;
@@ -37,12 +42,14 @@
             justify-content: center;
             align-items: center;
         }
-        .inner-div{
+
+        .inner-div {
             width: 200px;
             height: 200px;
             background-color: blue;
         }
-        .marginBox{
+
+        .marginBox {
             width: 400px;
             height: 400px;
             background-color: #b08354;
@@ -52,7 +59,7 @@
             border: 2px dotted #000;
         }
 
-        .borderBox{
+        .borderBox {
             width: 360px;
             height: 360px;
             background-color: #e4c482;
@@ -61,7 +68,8 @@
             align-items: center;
             border: 2px solid #000;
         }
-        .paddingBox{
+
+        .paddingBox {
             width: 320px;
             height: 320px;
             background-color: #b8c480;
@@ -71,7 +79,7 @@
             border: 2px dotted #000;
         }
 
-        .contentBox{
+        .contentBox {
             width: 280px;
             height: 280px;
             background-color: #b8c480;
@@ -81,12 +89,22 @@
             border: 2px solid #000;
         }
 
-        .parent-div{
-            
+        .parent-div {}
+
+        .margin-text {
+            position: absolute;
+            top: 7px;
+            left: 25px;
         }
 
+        .border-text {
+            position: absolute;
+            top: 28px;
+            left: 36px;
+        }
     </style>
 </head>
+
 <body>
     <!-- <div>
         <h1>hello world</h1>
@@ -106,22 +124,25 @@
 
         </div>
     </div> -->
-    <!-- <div class="marginBox">
+    <div class="marginBox">
+        <span class="margin-text">margin</span>
         <div class="borderBox">
+            <span class="border-text">border</span>
             <div class="paddingBox">
-                    <div class="contentBox">
-                            1200 * 13000
-                    </div>
+                <div class="contentBox">
+                    1200 * 13000
+                </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <div class="parent-div">
         <div class="child-div">
             hello world
         </div>
     </div>
-    
-    
+
+
 </body>
+
 </html>
