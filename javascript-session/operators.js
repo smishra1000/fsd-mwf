@@ -55,18 +55,18 @@
 //  ||  ---
 //  !  -----
 
-let p =10;
-let q =20;
-let r = 30;
+// let p =10;
+// let q =20;
+// let r = 30;
 
-console.log(r>p && r>q)// true
+// console.log(r>p && r>q)// true
             // true && true---true
             // false && true---false 
             // false && false--false 
 
             // true && false--false
 
-console.log(p>q && r>p)   //
+// console.log(p>q && r>p)   //
             // false && true    // false  
             
 // || --- true || false----true 
@@ -90,12 +90,20 @@ console.log(p>q && r>p)   //
 // let xy = pq;
 
 
-let z = 89
+// let z = 89
 // console.log(xy)
 
 // Increamnet dexrement operator-- ++x , x++ --x,x--
 
+// let p = 10;
+// let q = p++;
 
+// console.log(p);
+// console.log(q);
+
+// let x =10;
+// let y = x--;
+// console.log(x,y)
 
 
 
