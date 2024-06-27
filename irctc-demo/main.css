@@ -1,0 +1,137 @@
+.header-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-bar2 {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.menu-bar2 li {
+    list-style: none;
+}
+
+.login-button {
+    background-color: #213d77;
+    color: #fff;
+    outline: none;
+    font-weight: 500;
+}
+
+.irctc-exclusive {
+    background-color: #213d77;
+    color: #fff;
+    outline: none;
+    font-weight: 500;
+}
+
+.alert-button {
+    background-color: grey;
+    color: #000;
+}
+
+.alert-button:hover {
+    background-color: red;
+    color: #fff;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-image: url('https://www.irctc.co.in/nget/home_page_banner1.e6749c3d9698d1ac7608.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    background-position: center;
+}
+
+.train-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.train-details {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.chart-pnr-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.pnr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #213d77;
+    color: #fff;
+    width: 40%;
+}
+
+.charts{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #213d77;
+    color: #fff;
+}
+
+.journey-details{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.box1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.box2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.journey-forms{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 0 3%;
+}
+
+.from-box,.to-box,.boggie-class,.booking-class,.journey-date{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #000;
+    width: 100%;
+    border-radius: 3px;
+    padding: 5px;
+}
+input,select{
+    border: none;
+    outline: none;
+}
+.rotate-90{
+    transform: rotate(90deg);
+    color: #478be3;
+
+}
