@@ -106,43 +106,107 @@
 
 // create todo form and display in list
 
-let todos = [];
-let label = document.createElement("label");
-label.textContent = "todo name"
-document.body.appendChild(label)
-let input = document.createElement("input")
-input.id = "todo-name"
-input.value = ""
-input.placeholder = "enter todo item"
-document.body.appendChild(input)
+// let todos = [];
+// let label = document.createElement("label");
+// label.textContent = "todo name"
+// document.body.appendChild(label)
+// let input = document.createElement("input")
+// input.id = "todo-name"
+// input.value = ""
+// input.placeholder = "enter todo item"
+// document.body.appendChild(input)
 
-let saveBtn = document.createElement("button")
-saveBtn.textContent = "create";
+// let saveBtn = document.createElement("button")
+// saveBtn.textContent = "create";
 
-saveBtn.id = "save-btn"
+// saveBtn.id = "save-btn"
 
-document.body.appendChild(saveBtn)
+// document.body.appendChild(saveBtn)
 
-saveBtn.addEventListener("click", () => {
-    let todoname = document.getElementById("todo-name").value
-    todos.push(todoname)
-    displayToDos();
+// saveBtn.addEventListener("click", () => {
+//     let todoname = document.getElementById("todo-name").value
+//     todos.push(todoname)
+//     displayToDos();
+// })
+
+// function displayToDos(){
+//     let ul = document.createElement("ul")
+//     ul.style.listStyle="none"
+//     for(let i=0;i<todos.length;i++){
+//         let li = document.createElement("li")
+//         li.textContent=todos[i]
+//         li.style.padding="10px";
+//         li.style.margin="5px"
+//         li.style.height="20px"
+//         li.style.background="grey"
+//         ul.appendChild(li)
+//     }
+//     document.body.appendChild(ul)
+// }
+
+
+// let parentDiv = document.getElementById("parent-div")
+// let childDiv = document.getElementById("child-div")
+// let btn1 = document.getElementById("btn1");
+// console.log(parentDiv,childDiv,btn1)
+
+
+// parentDiv.addEventListener("click",()=>{
+//     console.log("parent div clicked")
+// },true)
+
+// childDiv.addEventListener("click",(event)=>{
+//     // event.stopPropagation()
+//     console.log("child div clicked")
+// },true)
+
+// btn1.addEventListener("click",(e)=>{
+//     // e.stopPropagation();
+//     console.log("button clicked")
+// })
+
+// document.body.addEventListener("click",()=>{
+//     console.log("body clicked")
+// },true)
+
+
+let list = document.getElementById("list")
+let items = document.getElementsByClassName("item");
+
+list.addEventListener("click",(e)=>{
+    console.log(e.target.innerText)
+    console.log("ul cliked")
 })
+// Array.from(items).forEach(element => {
+//         element.addEventListener("click",()=>{
+//             console.log("item clciked")
+//         })
+// });
 
-function displayToDos(){
-    let ul = document.createElement("ul")
-    ul.style.listStyle="none"
-    for(let i=0;i<todos.length;i++){
-        let li = document.createElement("li")
-        li.textContent=todos[i]
-        li.style.padding="10px";
-        li.style.margin="5px"
-        li.style.height="20px"
-        li.style.background="grey"
-        ul.appendChild(li)
-    }
-    document.body.appendChild(ul)
-}
+
+// let box1 = document.getElementById("box1");
+// let box2 = document.getElementById("box2");
+// let box3 = document.getElementById("box3");
+
+// box1.addEventListener("click",(e)=>{
+//     console.log("box1 clicked")
+// },true)
+
+// box2.addEventListener("click",(e)=>{
+//     console.log("box2 clicked")
+// },true)
+
+// box3.addEventListener("click",(e)=>{
+//     console.log("box3 clicked")
+//     //e.stopPropagation();
+// },true)
+
+// document.body.addEventListener("click",(e)=>{
+//     console.log("body also clicked")
+// },true)
+
+
+
 
 
 
