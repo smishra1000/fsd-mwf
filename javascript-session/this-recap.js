@@ -145,6 +145,35 @@
 
 
 
+// let a  =10;
+// function show(){
+//     console.log(a);//error---
+//     let a =20;
+//     console.log(a);//20
+// }
+// show();
+// console.log(a);//10
+
+// let obj = {
+//     name:"test1",
+//     show:function(){
+//         console.log(this);//obj
+//         // const a = ()=>{
+//         //     console.log(this);//obj/
+//         // }
+//         function a(){
+//             console.log(this);//window
+//         }
+//         a();
+//     }
+// }
+
+// obj.show();
+// console.log(this);//window
+
+
+
+
 
 
 
