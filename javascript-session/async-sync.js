@@ -168,6 +168,73 @@
 // print other document
 
 
+// Q write one function getUsers which should get all users from api and dipsly those 
+//users in dom using dipslayUses function
+
+
+let users = [];
+
+
+// in js for api call we can use fetch("url").then(function(res){
+//res.json()
+//}).then(function(data){
+    //console.log(data)
+//})
+function getUsers(){
+    return new Promise(function(resolve,rejct){
+        fetch("https://jsonplaceholder.typicode.com/users").then(function(res){
+            return res.json();
+        }).then(function(data){
+            console.log("users data=",data)
+            users = [...data]
+            resolve();
+        })
+    })
+   
+}
+
+function displayUsers(){
+    console.log("displaying users")
+    let usersBody = document.getElementById("users-body");
+    usersBody.innerHTML=""
+
+    for(let i = 0;i<users.length;i++){
+        const row = document.createElement("tr");
+
+        const idCol = document.createElement("td");
+        idCol.textContent=i;
+        row.appendChild(idCol)
+
+        const namecol = document.createElement("td");
+        namecol.textContent=users[i].name;
+        row.appendChild(namecol)
+
+        const emailCol = document.createElement("td");
+        emailCol.textContent=users[i].email
+        row.appendChild(emailCol)
+
+        const websiteCol = document.createElement("td");
+        websiteCol.textContent=users[i].email
+        row.appendChild(websiteCol)
+        usersBody.appendChild(row)
+
+    }
+
+}
+
+getUsers().then(function(){
+    displayUsers();
+})
+
+
+
+///async and awit--
+
+
+
+
+
+
 
 
 
