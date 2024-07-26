@@ -169,5 +169,13 @@
 
 
 
+// qustion: create player class and store name,country,type,age,displayInfo function
+//create Batsman class and Bowler class store totalRun toalMatch,totalWickts
+// calculate avrgare run by a batsman; average by bower.
+
+
+//----
+
+
 
 
