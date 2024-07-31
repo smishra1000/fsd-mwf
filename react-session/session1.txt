@@ -1,0 +1,12 @@
+1> nodejs-- nodejs.org----
+2>npm 
+3> node --version
+4> 
+ npm install create-react-app -g
+
+ create-react-app react-sample
+
+ 5>alternate ---- npx create-react-app <app_name>
+
+ 6>cd <app_name>
+ 7>npm start
