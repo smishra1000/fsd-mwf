@@ -36,3 +36,29 @@ summary
 filedet 
 legend 
 optgroup 
+
+
+
+-------------------------------js topics ------------------------------------
+data types? operators,typeof ?
+var let const--- global scope function block?
+conditional statement---if elese switch loop function function exp, arrow function 
+return statement,hoisting,clousre?
+call apply bind--dynamic scoping?
+this---?
+object creation in js-----------------------------------------
+prototype?---- chaiining linking?-----------------------------recap 
+es6----? recap 
+oops ?-----recap 
+promise, callback, async await?-----recap 
+dom manipulation ?-------------------------recap ------------------------
+
+interview questions ----50----
+
+
+
+
+
+
+
+
