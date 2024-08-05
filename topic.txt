@@ -47,10 +47,11 @@ return statement,hoisting,clousre?
 call apply bind--dynamic scoping?
 this---?
 object creation in js-----------------------------------------
-prototype?---- chaiining linking?-----------------------------recap 
+prototype?---- chaiining linking?-----------------------------done 
+promise, callback, async await?-----recap 
 es6----? recap 
 oops ?-----recap 
-promise, callback, async await?-----recap 
+
 dom manipulation ?-------------------------recap ------------------------
 
 interview questions ----50----
