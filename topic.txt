@@ -48,7 +48,7 @@ call apply bind--dynamic scoping?
 this---?
 object creation in js-----------------------------------------
 prototype?---- chaiining linking?-----------------------------done 
-promise, callback, async await?-----recap 
+promise, callback, async await?-----done 
 es6----? recap 
 oops ?-----recap 
 
