@@ -11,7 +11,7 @@ web application---
 vs code--- 1>
 
 html
-    what is html
+    what is html?
 doc type
 elemnts 
 tag
@@ -55,6 +55,24 @@ oops ?-----recap
 dom manipulation ?-------------------------recap ------------------------
 
 interview questions ----50----
+
+
+
+
+
+
+
+// i have this users array please perform these 2 operation on this
+[
+    {id:1,name:"test1",email:"test1@gmail.com"},
+    {id:2,name:"test2",email:"test2@gmail.com"},
+    {id:3,name:"test3",email:"test3@gmail.com"},
+    {id:2,name:"test4",email:"test4@gmail.com"}
+]
+
+//q1.  delete element from users array whose id=2
+// q2. edit info of this users array whose id = 1, updatedd data should be name:"test11",email:"test11@gmail.com"
+
 
 
 
