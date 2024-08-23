@@ -1,0 +1,17 @@
+.navbar{
+display: flex;
+justify-content: space-between;
+height: 40px;
+padding: 10px;
+align-items: center;
+background-color: chocolate;
+}
+
+.footer{
+    display: flex;
+justify-content: space-between;
+height: 40px;
+padding: 10px;
+align-items: center;
+background-color: grey;
+}
