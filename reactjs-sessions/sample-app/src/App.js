@@ -1,4 +1,6 @@
+import Blogs from "./class-based/Blogs";
 import Employee from "./class-based/Employee";
+import EventHandling from "./class-based/EventHandling";
 import HeaderBar from "./class-based/HeaderBar";
 import MyResume from "./class-based/MyResume";
 import User from "./class-based/User";
@@ -17,8 +19,12 @@ function App() {
       <User></User> */}
       {/* {User()} */}
 
-      <HeaderBar/>
-      <MyResume/>
+      {/* <HeaderBar/>
+      <MyResume/> */}
+      {/* <User name="sameer" age="20" address="hyd"/> */}
+      {/* <Blogs/> */}
+
+      <EventHandling/>
     </div>
   );
 }
