@@ -2,6 +2,7 @@ import Blogs from "./class-based/Blogs";
 import Employee from "./class-based/Employee";
 import EventHandling from "./class-based/EventHandling";
 import HeaderBar from "./class-based/HeaderBar";
+import LifeCycleDemo from "./class-based/LifeCycleDemo";
 import MyResume from "./class-based/MyResume";
 import User from "./class-based/User";
 function App() {
@@ -24,7 +25,8 @@ function App() {
       {/* <User name="sameer" age="20" address="hyd"/> */}
       {/* <Blogs/> */}
 
-      <EventHandling/>
+      {/* <EventHandling/> */}
+      <LifeCycleDemo age={20}/>
     </div>
   );
 }
