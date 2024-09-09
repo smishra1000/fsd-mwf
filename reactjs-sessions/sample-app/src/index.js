@@ -6,6 +6,8 @@ import "./Main.css"
 import Header from './Header';
 import Footer from './Footer';
 
+import "bootstrap/dist/js/bootstrap.bundle.js"
+import "bootstrap/dist/css/bootstrap.min.css"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,4 +20,8 @@ root.render(
   // </div>
   <App/>
 );
+
+// setTimeout(()=>{
+//   root.unmount();
+// },2000)
 

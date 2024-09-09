@@ -27,8 +27,9 @@ class LifeCycleDemo extends React.Component{
             <div>
                 <h3>LifeCycle demo</h3>
                 <h3>counter value is {this.state.counter}</h3>
-                <button onClick={this.increment}>increment</button>
+                <button className="btn btn-primary"  onClick={this.increment}>increment</button>
                 <h4>My age is {this.state.age}</h4>
+                <button className="btn btn-danger">Logout</button>
             </div>
         )
     }
@@ -54,6 +55,10 @@ class LifeCycleDemo extends React.Component{
 
     componentDidUpdate(){
         console.log("5. update phase componentDidUpdate")
+    }
+
+    componentWillUnmount(){
+        console.log("componennt unmounting")
     }
 }
 

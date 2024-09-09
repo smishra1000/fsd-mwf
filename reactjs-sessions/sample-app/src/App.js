@@ -1,13 +1,14 @@
 import Blogs from "./class-based/Blogs";
 import Employee from "./class-based/Employee";
 import EventHandling from "./class-based/EventHandling";
+import FormHandling from "./class-based/FormHandling";
 import HeaderBar from "./class-based/HeaderBar";
 import LifeCycleDemo from "./class-based/LifeCycleDemo";
 import MyResume from "./class-based/MyResume";
 import User from "./class-based/User";
 function App() {
   return (
-    <div className="App">
+    <div className="App container">
       {/* <div>
         <div className='user-card'>
           <div style={{ background: "yellow", width: '120px', height: '100px' }}></div>
@@ -26,7 +27,8 @@ function App() {
       {/* <Blogs/> */}
 
       {/* <EventHandling/> */}
-      <LifeCycleDemo age={20}/>
+      {/* <LifeCycleDemo age={20}/> */}
+      <FormHandling/>
     </div>
   );
 }
