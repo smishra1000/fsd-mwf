@@ -5,9 +5,11 @@ class FormHandling extends React.Component {
         super(props);
         this.state = {
             name: "",
+            id:"",
             email: "",
             address: "",
-            employees: []
+            employees: [],
+            isUpdate: false
         }
     }
 
@@ -26,23 +28,44 @@ class FormHandling extends React.Component {
     onSave(e) {
         e.preventDefault();
 
-        let emp = {
-            name: this.state.name,
-            email: this.state.email,
-            address: this.state.address
+        if (this.state.isUpdate === true) {
+            /// update part
+        let updatedEmployees = this.state.employees.map((item)=>{
+            if(item.id===this.state.id){
+                return {...item,name:this.state.name,email:this.state.email,address:this.state.address}
+            }else{
+                return item
+            }
+        })
+        this.setState({employees:updatedEmployees, name: "", email: "", address: "",isUpdate: false})
+
+        } else {
+            let emp = {
+                name: this.state.name,
+                email: this.state.email,
+                address: this.state.address,
+                id:this.state.employees.length+1
+            }
+            let empList = this.state.employees;
+            empList.push(emp)
+            this.setState({ employees: empList })
+            this.setState({ name: "", email: "", address: "" })
         }
-        let empList = this.state.employees;
-        empList.push(emp)
-        this.setState({ employees: empList })
-        this.setState({ name: "", email: "", address: "" })
+
+
     }
 
-    deleteEmployee(e,el){
-        let newList = this.state.employees.filter((item)=>{
-            return item.email!==el.email
+    deleteEmployee(e, el) {
+        let newList = this.state.employees.filter((item) => {
+            return item.email !== el.email
         })
 
-        this.setState({employees:newList})
+        this.setState({ employees: newList })
+    }
+    editEmployee(e, el) {
+        // need to implement
+        console.log(el)
+        this.setState({ isUpdate: true, name: el.name, email: el.email, address: el.address,id:el.id })
     }
 
     render() {
@@ -62,20 +85,26 @@ class FormHandling extends React.Component {
                         <label class="form-label">Address</label>
                         <input type="text" class="form-control" value={this.state.address} onChange={(e) => this.onAddressChange(e)} />
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    {!this.state.isUpdate && <button type="submit" class="btn btn-primary">Submit</button>}
+                    {this.state.isUpdate && <button type="submit" class="btn btn-success">Update</button>}
                 </form>
-                <div className="row">
+                <div className="row mt-4">
+                <input type="text" class="form-control" placeholder="search here"/>
+                </div>
+                <div className="row mt-4">
                     {this.state.employees.map((item) => {
                         return (
                             <div className="col-md-3">
                                 <div className="card">
                                     <div className="card-body">
-                                        <h5>{item.name}</h5>
-                                        <h5>{item.address}</h5>
-                                        <p>{item.email}</p>
+                                        <h3>Name: {item.name}</h3>
+                                        <p>Email: {item.email}</p>
+                                        <p>Address: {item.address}</p>
+                                       
                                     </div>
                                     <div>
-                                        <button className="btn btn-danger" onClick={(e)=>this.deleteEmployee(e,item)}>delete</button>
+                                        <button className="btn btn-danger" onClick={(e) => this.deleteEmployee(e, item)}>delete</button>
+                                        <button className="btn btn-warning" onClick={(e) => this.editEmployee(e, item)}>Edit</button>
                                     </div>
                                 </div>
                             </div>
