@@ -6,9 +6,14 @@ import HeaderBar from "./class-based/HeaderBar";
 import LifeCycleDemo from "./class-based/LifeCycleDemo";
 import MyResume from "./class-based/MyResume";
 import User from "./class-based/User";
+import Home from "./pages/Home";
+import Aboutus from "./pages/Aboutus";
+import Contactus from "./pages/Contactus"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Navbar from "./pages/Navbar";
 function App() {
   return (
-    <div className="App container">
+    <div className="App container-fluid">
       {/* <div>
         <div className='user-card'>
           <div style={{ background: "yellow", width: '120px', height: '100px' }}></div>
@@ -28,7 +33,19 @@ function App() {
 
       {/* <EventHandling/> */}
       {/* <LifeCycleDemo age={20}/> */}
-      <FormHandling/>
+      {/* <FormHandling/> */}
+      <BrowserRouter>
+
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="home" element={<Home />}></Route>
+          <Route path="aboutus" element={<Aboutus />}></Route>
+          <Route path="contactus" element={<Contactus />}></Route>
+          <Route path="formhandling" element={<FormHandling />}></Route>
+          <Route path="blogs" element={<Blogs />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
