@@ -47,6 +47,10 @@ class Blogs extends React.Component {
         )
 
     }
+
+    componentWillUnmount(){
+        console.log("componenet will unmount is calling from blogs")
+    }
 }
 
 export default Blogs

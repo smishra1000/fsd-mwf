@@ -115,6 +115,12 @@ class FormHandling extends React.Component {
             </div>
         )
     }
+
+    componentWillUnmount(){
+        console.log("componenet will unmount is calling from from handling")
+
+        alert("hey your fprm is unsaved do you wnat to procedd")
+    }
 }
 
 export default FormHandling
