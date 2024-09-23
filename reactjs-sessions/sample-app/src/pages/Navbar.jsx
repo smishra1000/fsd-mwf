@@ -35,6 +35,9 @@ function Navbar() {
                         <li className="nav-item">
                             <Link to="functions" className="nav-link" >Functional comp</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link to="hooks" className="nav-link" >Hooks Demo</Link>
+                        </li>
                     </ul>
                 </div>
             </div>

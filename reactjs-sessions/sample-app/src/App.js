@@ -12,6 +12,7 @@ import Contactus from "./pages/Contactus"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Navbar from "./pages/Navbar";
 import Company from "./functional-comp/Company";
+import Hooks from "./functional-comp/Hooks/Hooks";
 function App() {
   return (
     <div className="App container-fluid">
@@ -46,6 +47,7 @@ function App() {
           <Route path="formhandling" element={<FormHandling />}></Route>
           <Route path="blogs" element={<Blogs />}></Route>
           <Route path="functions" element={<Company />}></Route>
+          <Route path="hooks" element={<Hooks />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
