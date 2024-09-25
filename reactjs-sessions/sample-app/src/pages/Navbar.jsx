@@ -38,6 +38,10 @@ function Navbar() {
                         <li className="nav-item">
                             <Link to="hooks" className="nav-link" >Hooks Demo</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link to="lifecycledemo" className="nav-link" >Lifecycleusecase</Link>
+                        </li>
+
                     </ul>
                 </div>
             </div>

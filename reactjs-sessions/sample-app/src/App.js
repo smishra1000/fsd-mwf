@@ -13,6 +13,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Navbar from "./pages/Navbar";
 import Company from "./functional-comp/Company";
 import Hooks from "./functional-comp/Hooks/Hooks";
+import ParentAge from "./class-based/LifeCycle/ParentAge";
 function App() {
   return (
     <div className="App container-fluid">
@@ -48,6 +49,7 @@ function App() {
           <Route path="blogs" element={<Blogs />}></Route>
           <Route path="functions" element={<Company />}></Route>
           <Route path="hooks" element={<Hooks />}></Route>
+          <Route path="lifecycledemo" element={<ParentAge name="testparent" />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
