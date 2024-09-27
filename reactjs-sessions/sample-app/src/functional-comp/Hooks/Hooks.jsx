@@ -1,4 +1,5 @@
 import UseEffectHook from "./UseEffectHook"
+import UseReducerHook from "./UseReducerHook"
 import UseStateHook from "./UseStateHook"
 
 function Hooks(){
@@ -6,7 +7,8 @@ function Hooks(){
         <div>
             <h3>Hooks Demo</h3>
             {/* <UseStateHook/> */}
-            <UseEffectHook/>
+            {/* <UseEffectHook/> */}
+            <UseReducerHook/>
         </div>
     )
 }

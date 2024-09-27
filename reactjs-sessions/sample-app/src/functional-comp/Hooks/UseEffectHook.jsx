@@ -10,6 +10,9 @@ function UseEffectHook(){
 
     useEffect(()=>{
         console.log("i am 1st version of useEffct")
+        return ()=>{
+            console.log("unmounting")
+        }
     })
 
     /** 2 this version of useEffct will get callaed on very first render
