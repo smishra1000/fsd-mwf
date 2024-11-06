@@ -1,6 +1,6 @@
 import React,{ useEffect } from "react"
 function EmpChild(props){
-    console.log("render")
+    console.log("child render")
     // console.log("3")
 
     // useEffect(()=>{

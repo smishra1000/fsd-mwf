@@ -10,9 +10,10 @@ API integration using fetch, axios
 Need of Redux, What is Redux?, Redux Architecture, Redux Action
 Redux Reducers
 Redux Store
+Async operation using redux thunk
 Principles of Redux
 Introduction of Props validation with data types.
-Async operation using redux thunk
+
 Project setup; component, Project: Ecommerce Implementation/ Nodejs express setup
 Performance Optimization React Apps
 
