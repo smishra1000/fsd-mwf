@@ -1,6 +1,7 @@
 import EmployeesList from "./EmployeesList"
 import EmpParent from "./EmpParent"
 import MyPhotos from "./MyPhotos"
+import People from "./People"
 import PropsDrilling from "./PropsDrilling"
 import UseContextHookDemo from "./UseContextHook"
 import UseEffectHook from "./UseEffectHook"
@@ -20,7 +21,8 @@ function Hooks(){
             {/* <UseRefHookDemo/> */}
             {/* <PropsDrilling age="60"/> */}
             {/* <UseContextHookDemo age="60"/> */}
-            <EmpParent/>
+            {/* <EmpParent/> */}
+            <People/>
         </div>
     )
 }
