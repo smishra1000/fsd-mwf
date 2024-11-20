@@ -20,6 +20,7 @@ function People() {
     return (
         <div>
             <h2>People</h2>
+            <h3>response from nodejs</h3>
             <div style={{ display: 'flex', flexDirection: 'row', gap: '10px' }}>
                 {peoples.map((item) => {
                     return (
