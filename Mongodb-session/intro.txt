@@ -1,0 +1,4 @@
+
+installation link
+https://www.mongodb.com/docs/manual/installation/?msockid=130dcf8f9565685212e8dc8d948d6945
+https://www.mongodb.com/docs/mongodb-shell/?msockid=130dcf8f9565685212e8dc8d948d6945
