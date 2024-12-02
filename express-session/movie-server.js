@@ -17,33 +17,37 @@ app.get("/movies",(req,res)=>{
 
     console.log(req.query)
     let filteredMovies = movies
-    // if(genres){
-    //     const genresData = genres.split("|")
+    if(genres){
+        const genresData = genres.split("|")
 
-    //     console.log(genresData)
-    //     filteredMovies = filteredMovies.filter((movie)=>{
-    //         return genresData.some((genre)=>movie.genres.includes(genre))
-    //     })
-    // }
-    // if(languages){
-    //     const languagesData = languages.split("|")
+        console.log(genresData)
+        filteredMovies = filteredMovies.filter((movie)=>{
+            return genresData.some((genre)=>movie.genres.includes(genre))
+        })
+    }
+    if(languages){
+        const languagesData = languages.split("|")
 
-    //     console.log(languagesData)
-    //     filteredMovies = filteredMovies.filter((movie)=>{
-    //         return languagesData.some((language)=>movie.languages.includes(language))
-    //     })
-    // }
+        console.log(languagesData)
+        filteredMovies = filteredMovies.filter((movie)=>{
+            return languagesData.some((language)=>movie.languages.includes(language))
+        })
+    }
     res.status(200).json(filteredMovies)
 })
 
 
-app.get("/movies/:id",(req,res)=>{
-    console.log(req.params.id)
+app.get("/movies/:name",(req,res)=>{
+    console.log(req.params.name)
     const movie = movies.find((mov)=>{
-        return mov.id===parseInt(req.params.id)
+        return mov.title===req.params.name
     })
-
-    res.status(200).json(movie)
+    if(movie){
+        res.status(200).json(movie)
+    }else{
+        res.status(404).json({err:"movie not found"})
+    }
+    
 })
 
 app.post("/movies",(req,res)=>{
@@ -60,7 +64,7 @@ app.post("/movies",(req,res)=>{
         year
     }
     movies.push(newMovie);
-    res.status(200).json(newMovie)
+    res.status(201).json(newMovie)
 })
 
 app.delete("/movies/:id",(req,res)=>{
