@@ -3,7 +3,7 @@ const Movie = require("../models/movie")
 
 const router = express.Router();
 
-
+//localhost:7000/movies/search?languages=hindi|telugu&genres=Thriller|Action
 router.get("/search",async (req,res)=>{
     const {genres,languages} = req.query;
     console.log(req.query)

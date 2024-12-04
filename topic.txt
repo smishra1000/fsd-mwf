@@ -75,6 +75,15 @@ interview questions ----50----
 
 
 
+https://stackoverflow.com/questions/29820791/git-ignore-node-modules-folder-everywhere
+
+**node_modules
+This works for me
+
+recursive approach to ignore all node_modules present in sub folders
+
+
+
 
 
 
