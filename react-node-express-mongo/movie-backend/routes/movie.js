@@ -3,7 +3,28 @@ const Movie = require("../models/movie")
 
 const router = express.Router();
 
-router.get("/",async(req,res)=>{
+
+router.get("/search",async (req,res)=>{
+    const {genres,languages} = req.query;
+    console.log(req.query)
+    const query = {};
+    if(genres){
+        query.genres = {$in:genres.split("|")}
+    }
+
+    if(languages){
+        query.languages = {$in:languages.split("|")}
+    }
+
+    console.log(query)
+
+    const movies = await Movie.find(query);
+
+    res.status(200).json(movies)
+})
+
+
+router.get('/',async(req,res)=>{
     let movies = await Movie.find({});
     res.send(movies)
 })
