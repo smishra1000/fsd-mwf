@@ -2,9 +2,11 @@ import { useState, useEffect } from "react"
 function Movie() {
 
     const [movies, setMovies] = useState([]);
-    const [languages, setLanguages] = useState(["Hindi", "English", "Telgu","Kannada"])
-    const [genres, setGenres] = useState(["Thriller", "Action", "Drama", "Comedy"])
-    const [selectedLanguage, setSlecetdLanguage] = useState([])
+    const [languages, setLanguages] = useState(["Hindi", "English", "Telugu","Kannada"])
+    const [genres, setGenres] = useState(["Thriller", "Action", "Drama", "Comedy","Family","Fantasy"])
+    const [selectedLanguage, setSlecetdLanguage] = useState([]);
+    const [selectedGenres,setSelectedGenres] = useState([]);
+    const [commonFilters,setCommonFilters] = useState([])
 
     const getAllMovies = async () => {
         let res = await fetch("http://localhost:7000/movies");
@@ -36,6 +38,27 @@ function Movie() {
         setSlecetdLanguage(updatedLangugaes)
         //    console.log(selectedLanguage)
     }
+    //
+
+    const toggleGenres = (e, genre) => {
+        // first check if language is alredy present in selected array 
+        // if yes then deselct it
+
+        //if not then push it
+        let updatedGenres = [];
+        const isPresent = selectedGenres.includes(genre);
+        if (isPresent) {
+            updatedGenres = selectedGenres.filter((ele) => {
+                return ele !== genre
+            })
+        } else {
+            updatedGenres = [...selectedGenres];
+            updatedGenres.push(genre)
+        }
+
+        setSelectedGenres(updatedGenres)
+        //    console.log(selectedGenres)
+    }
 
     const searchMovieByLanguages = async ()=>{
         const languages = selectedLanguage.join("|")
@@ -44,10 +67,24 @@ function Movie() {
         setMovies(movies)
     }
 
+    const searchMovieByGenres = async ()=>{
+        const genres = selectedGenres.join("|")
+        let res = await fetch(`http://localhost:7000/movies/search?genres=${genres}`);
+        let movies = await res.json();
+        setMovies(movies)
+    }
+
     useEffect(() => {
         console.log(selectedLanguage)
+        setCommonFilters([...commonFilters,...selectedLanguage])
         searchMovieByLanguages()
     }, [selectedLanguage])
+
+    useEffect(() => {
+        console.log(selectedGenres)
+        setCommonFilters([...commonFilters,...selectedGenres])
+        searchMovieByGenres()
+    }, [selectedGenres])
 
     return (
         <div className="container">
@@ -74,7 +111,7 @@ function Movie() {
                             <div className="language-box" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '3px' }}>
                                 {genres.map((ele) => {
                                     return (
-                                        <button type="button" class="btn btn-outline-primary">{ele}</button>
+                                        <button type="button" class="btn btn-outline-primary" onClick={(e) => toggleGenres(e, ele)} style={{ background: selectedGenres.includes(ele) ? '#0d6efd' : '', color: selectedGenres.includes(ele) ? 'white' : '#0d6efd' }}>{ele}</button>
                                     )
                                 })}
                             </div>
@@ -82,7 +119,16 @@ function Movie() {
                     </div>
                 </div>
                 <div className="col-md-8">
+                <div className="language-box" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '3px' }}>
+
+                                {commonFilters.map((ele) => {
+                                    return (
+                                        <button type="button" class="btn btn-outline-primary" style={{ borderRadius:'23px',background: commonFilters.includes(ele) ? '#0d6efd' : '', color: commonFilters.includes(ele) ? 'white' : '#0d6efd' }}>{ele}</button>
+                                    )
+                                })}
+                            </div>
                     <h4>Movies in Hyderabad</h4>
+                    {movies.length===0 && <h3>No Movies Found</h3>}
                     <div className="row mt-3">
                         {movies.map((movie) => {
                             return (
