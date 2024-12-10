@@ -75,29 +75,33 @@ function Movie() {
     }
 
     useEffect(() => {
-        console.log(selectedLanguage)
-        setCommonFilters([...commonFilters,...selectedLanguage])
         searchMovieByLanguages()
     }, [selectedLanguage])
 
     useEffect(() => {
-        console.log(selectedGenres)
-        setCommonFilters([...commonFilters,...selectedGenres])
         searchMovieByGenres()
     }, [selectedGenres])
+
+    useEffect(()=>{
+        setCommonFilters(previousData => {
+            const combinedData = [...selectedGenres,...selectedLanguage];
+            const uniqueData = Array.from(new Set(combinedData));
+            return uniqueData;
+          });
+    },[selectedGenres,selectedLanguage])
 
     return (
         <div className="container">
             <div className="row mt-5">
                 <div className="col-md-4">
                     <div className="row mt-4">
-                        <h5>Filters</h5>
+                        <h5 className="heading-text">Filters</h5>
                         <div className="card">
-                            <h5>Languages</h5>
+                            <h5 className="filter-name-heading">Languages</h5>
                             <div className="language-box" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '3px' }}>
                                 {languages.map((ele) => {
                                     return (
-                                        <button type="button" class="btn btn-outline-primary" onClick={(e) => toggleLanguage(e, ele)} style={{ background: selectedLanguage.includes(ele) ? '#0d6efd' : '', color: selectedLanguage.includes(ele) ? 'white' : '#0d6efd' }}>{ele}</button>
+                                        <button type="button" className="btn btn-outline-danger button-text" onClick={(e) => toggleLanguage(e, ele)} style={{ background: selectedLanguage.includes(ele) ? '#dc354b' : '', color: selectedLanguage.includes(ele) ? 'white' : '#dc354b' }}>{ele}</button>
                                     )
                                 })}
 
@@ -107,11 +111,11 @@ function Movie() {
                     </div>
                     <div className="row mt-4">
                         <div className="card">
-                            <h5>Genres</h5>
+                            <h5  className="filter-name-heading">Genres</h5>
                             <div className="language-box" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '3px' }}>
                                 {genres.map((ele) => {
                                     return (
-                                        <button type="button" class="btn btn-outline-primary" onClick={(e) => toggleGenres(e, ele)} style={{ background: selectedGenres.includes(ele) ? '#0d6efd' : '', color: selectedGenres.includes(ele) ? 'white' : '#0d6efd' }}>{ele}</button>
+                                        <button type="button" className="btn btn-outline-danger button-text" onClick={(e) => toggleGenres(e, ele)} style={{ background: selectedGenres.includes(ele) ? '#dc354b' : '', color: selectedGenres.includes(ele) ? 'white' : '#dc354b' }}>{ele}</button>
                                     )
                                 })}
                             </div>
@@ -123,11 +127,11 @@ function Movie() {
 
                                 {commonFilters.map((ele) => {
                                     return (
-                                        <button type="button" class="btn btn-outline-primary" style={{ borderRadius:'23px',background: commonFilters.includes(ele) ? '#0d6efd' : '', color: commonFilters.includes(ele) ? 'white' : '#0d6efd' }}>{ele}</button>
+                                        <button type="button" class="btn btn-outline-danger button-text" style={{ borderRadius:'23px',background: commonFilters.includes(ele) ? '#dc354b' : '', color: commonFilters.includes(ele) ? 'white' : '#dc354b' }}>{ele}</button>
                                     )
                                 })}
                             </div>
-                    <h4>Movies in Hyderabad</h4>
+                    <h4 className="heading-text">Movies in Hyderabad</h4>
                     {movies.length===0 && <h3>No Movies Found</h3>}
                     <div className="row mt-3">
                         {movies.map((movie) => {
