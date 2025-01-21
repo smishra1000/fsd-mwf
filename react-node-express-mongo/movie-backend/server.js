@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors")
 const movieRoutes = require("./routes/movie")
+const authRoutes = require("./routes/auth")
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.use(express.json())
 mongoose.connect("mongodb://localhost:27017/movie_db");
 
 app.use("/movies",movieRoutes)
+app.use("/auth",authRoutes)
 
 app.listen(7000,()=>{
     console.log("server is running at port 7000")

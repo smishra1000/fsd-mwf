@@ -2,7 +2,7 @@ const express = require("express");
 const Movie = require("../models/movie")
 
 const router = express.Router();
-
+// [hindi,telug]
 //localhost:7000/movies/search?languages=hindi|telugu&genres=Thriller|Action
 router.get("/search",async (req,res)=>{
     const {genres,languages} = req.query;
@@ -27,6 +27,11 @@ router.get("/search",async (req,res)=>{
 router.get('/',async(req,res)=>{
     let movies = await Movie.find({});
     res.send(movies)
+})
+
+router.get("/:id/:title", async(req,res)=>{
+    let movie = await Movie.find({title:req.params.title});
+    res.send(movie)
 })
 
 router.get("/:title",async (req,res)=>{
